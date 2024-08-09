@@ -1,11 +1,11 @@
 $treeFilePath = "c:\treeline_files"
 
 #gets files beacuse intune will only send the script
-Invoke-WebRequest https://github.com/drewpchannel/AdobeSettings/archive/refs/heads/main.zip -OutFile $treeFilePath\asa.zip
-Expand-Archive -Path $treeFilePath\asa.zip -DestinationPath $treeFilePath -Force
+Invoke-WebRequest https://github.com/drewpchannel/SetDefaultApps/archive/refs/heads/main.zip -OutFile $treeFilePath\sda.zip
+Expand-Archive -Path $treeFilePath\sda.zip -DestinationPath $treeFilePath -Force
 
 #gets the user idea from whoami /user
-$SID = & "$treeFilePath\SIDget\GetSID.ps1"
+$SID = & "$treeFilePath\SetDefaultApps-main\SIDget\GetSID.ps1"
 
 # Set the default browser to Chrome
 $chromePath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
